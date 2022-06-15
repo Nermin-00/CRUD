@@ -1,7 +1,11 @@
+
 document.addEventListener('DOMContentLoaded', function () {
+    fetch('http://localhost:5000/getAll')
+        .then(response => response.json())
+        .then(data => console.log(data));
     loadHTMLTable([])
 })
-//T1
+
 function loadHTMLTable(data) {
     const table = document.querySelector('table tbody');
     
